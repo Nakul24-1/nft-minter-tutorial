@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3("wss://eth-goerli.g.alchemy.com/v2/PkUo5mwaj5E1lvZNEJC6coVLyhdDg3Wu");
