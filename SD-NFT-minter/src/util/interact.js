@@ -56,7 +56,7 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Write a message in the text-field above.",
+          status: "👆🏽",
         };
       } else {
         return {
@@ -102,8 +102,9 @@ export const mintNFT = async (url, name, description) => {
   const transactionParameters = {
     to: contractAddress, // Required except during contract publications.
     from: window.ethereum.selectedAddress, // must match user's active address.
-    'data': window.contract.methods.safeMint(window.ethereum.selectedAddress, tokenURI).encodeABI() //make call to NFT smart contract 
+    'data': window.contract.methods.safeMint(window.ethereum.selectedAddress, URI2).encodeABI() //make call to NFT smart contract 
   };
+  console.log(URI2)
 
   //sign transaction via Metamask
   try {

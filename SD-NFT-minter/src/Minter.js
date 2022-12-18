@@ -72,10 +72,15 @@ const Minter = (props) => {
 
       <br></br>
       <h1 id="title">Stable Diffusion NFT Minter</h1>
-      <h3>
-        Here is the next NFT to be minted if you like it you can press "Mint."
-      </h3>
-      <p>NFT Number {NFTnum} </p>
+      <div>
+        <h3>
+          Here is the next NFT to be minted if you like it you can press "Mint."
+        </h3>
+        <p>NFT Number {NFTnum} </p>
+        <p id="status">
+          {status}
+        </p>
+      </div>
       <div>
         <img
           src={url}
@@ -86,9 +91,7 @@ const Minter = (props) => {
       <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button>
-      <p id="status">
-        {status}
-      </p>
+
     </div>
   );
 };
